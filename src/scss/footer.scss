@@ -1,0 +1,93 @@
+.footer {
+  background: rgb(229,240,248);
+  background: radial-gradient(circle, rgba(229,240,248,1) 0%, rgba(178,206,247,1) 60%);
+  padding: 25px 0 0;
+  font-weight: 500;
+
+  @include media-min(md) {
+    padding: 45px 0 0;
+  }
+
+  .logo {
+    text-align: center;
+
+    @include media-min(md) {
+      text-align: left;
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 10px;
+
+  @include media-min(md) {
+    column-gap: 20px;
+    grid-template-columns: 250px 200px 1fr;
+  }
+
+  @include media-min(lg) {
+    grid-template-columns: 250px 300px 1fr;
+  }
+
+  @include media-min(xl) {
+    grid-template-columns: 250px 300px 1fr 1fr;
+  }
+
+  .column {
+    box-sizing: border-box;
+    color: $gray;
+    padding: 10px;
+
+    @include media-min(lg) {
+      padding: 0 10px;
+    }
+  }
+}
+
+.column-title {
+  font-size: 18px;
+  padding-left: 35px;
+  padding-bottom: 20px;
+  background-repeat: no-repeat;
+  background-size: 26px;
+
+  @include media-min(lg) {
+    font-size: 26px;
+    padding-left: 50px;
+    background-size: 36px;
+  }
+
+  &.-simple {
+    padding-left: 0 !important;
+  }
+}
+
+.column-data {
+  line-height: 1.56;
+  padding-left: 38px;
+  font-size: 14px;
+
+  @include media-min(lg) {
+    font-size: 16px;
+    padding-left: 55px;
+  }
+}
+
+.footer-line {
+  background: #a6c1f1;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  color: $white;
+  justify-content: space-between;
+  padding: 10px 15px;
+  margin-top: 20px;
+  font-size: 14px;
+
+  @include media-min(md) {
+    flex-direction: row;
+  }
+}

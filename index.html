@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Example</title>
+    <link rel="preload" href="/goro/dist/fonts/RubikBubbles-Regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="/goro/dist/fonts/MontserratAlternates-Bold.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="/goro/dist/fonts/MontserratAlternates-Medium.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="/goro/dist/fonts/MontserratAlternates-Regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link href="/dist/scss/main.css" rel="stylesheet" />
+</head>
+<body>
+<div class="sidebar" id="sidebar">
+    <button class="close-btn" id="closeBtn">✖</button>
+    <div class="sidebar-menu" id="sidebarMenu"></div>
+</div>
+<div class="social-bar">
+    <a href="#" class="social-icon"><img src="public/facebook.svg" alt="Facebook icon" width="48" height="48"></a>
+    <a href="#" class="social-icon"><img src="public/instagram.svg" alt="Instagram icon" width="48" height="48"></a>
+    <a href="#" class="social-icon"><img src="public/telegram.svg" alt="Telegram icon" width="48" height="48"></a>
+    <a href="#" class="social-icon"><img src="public/viber.svg" alt="Viber icon" width="48" height="48"></a>
+</div>
+<header class="header padding-top-5">
+    <div class="container header-top">
+        <div class="header-hamburger">
+            <button class="hamburger-btn js-header-hamburger">
+                <img src="public/hamburger.svg" alt="Facebook icon" width="42" height="25">
+            </button>
+        </div>
+        <a href="/" class="header-logo-link">
+            <img src="/public/logo-n.png" alt="Kotygoroshko travel club" width="87" class="main-logo inline-block">
+            <p class="company-name">Котигорошко</p>
+            <p class="company-description">Клуб мандрівників</p>
+        </a>
+        <div class="header-action-part">
+            <div class="header-actions">
+                <div class="phones">
+                    <a href="tel:+380930756960" class="phone-link">093-075-69-60</a>
+                </div>
+                <div class="phones">
+                    <a href="tel:+380508281688" class="phone-link">050-828-16-88</a>
+                    <a href="tel:+380677957415" class="phone-link">067-795-74-15</a>
+                </div>
+                <div class="search-holder inline-block inline-middle">
+                    <form method="get" class="header-search-form" action="">
+                        <input type="search" class="header-search-input txt-search-movil" placeholder="Пошук..." name="s" id="s" />
+                        <button type="submit" class="header-search-btn" name="submit">
+                            <img src="public/Magnifer.svg" alt="Search icon">
+                        </button>
+                    </form>
+                </div><br/>
+            </div>
+            <div class="header-menu-holder">
+                <nav class="nav-links" id="mainMenu">
+                    <a href="#" class="header-menu-link">Тури</a>
+                    <a href="#" class="header-menu-link">Тури по Україні</a>
+                    <a href="#" class="header-menu-link">Тури за кордон</a>
+                    <a href="#" class="header-menu-link">Корпоративні</a>
+                    <a href="#" class="header-menu-link">Для Школярів</a>
+                    <a href="#" class="header-menu-link">Акціі</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="container banner flex justify-between">
+        <div class="banner-text">
+            <div class="item"><h1>Тури вихідного дня</h1></div>
+            <div class="item">Подорожі</div>
+            <div class="item">Відпочинок</div>
+        </div>
+        <div class="banner-img">
+            <img src="public/header-img-o.jpg">
+        </div>
+    </div>
+    <div class="marquee-holder">
+        <div class="marquee">
+            з Котигорошко! Починай свою подорож з Котигорошко! Починай свою подорож з Котигорошко! Починай свою подорож
+        </div>
+    </div>
+</header>
+<div class="container">
+    <section>
+        <h2 class="1 h2">ТУРИ НА ЧЕРВЕНЬ</h2>
+        <div class="cards-list">
+            <div class="card-container">
+                <div class="card card-tour -active">
+                    <div class="event-img-holder">
+                        <img data-src="https://kotygoroshko.mk.ua/wp-content/uploads/2024/05/зображення_viber_2024-05-23_04-00-28-704-624x312.jpg" class="event-img  lazyloaded" src="https://kotygoroshko.mk.ua/wp-content/uploads/2024/05/зображення_viber_2024-05-23_04-00-28-704-624x312.jpg">
+                    </div>
+                    <div class="card-header">
+                        <h4 class="card-text"><span title="14 Июня (П&quot;ятниця)">14.06.24</span></h4>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title"><a href="https://kotygoroshko.mk.ua/kamyanec-podilskij-chernivci-bakota/" class="event-link" title="Кам’янець-Подільський, Чернівці + Бакота" target="_blank" rel="noopener">Кам’янець-Подільський, Чернівці + Бакота</a></h3>
+                    </div>
+                    <div class="card-footer">
+                        <div class="event-price">&nbsp;5 000 грн</div>
+                        <button type="button" class="btn -success" data-toggle="modal" data-target="#eventbookingModal" data-bookname="Кам’янець-Подільський, Чернівці + Бакота" data-bookid="6652" data-times="14.06.2024">забронювати</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="card card-tour -active">
+                    <div class="event-img-holder">
+                        <img data-src="https://kotygoroshko.mk.ua/wp-content/uploads/2024/05/зображення_viber_2024-05-23_04-00-28-704-624x312.jpg" class="event-img  lazyloaded" src="https://kotygoroshko.mk.ua/wp-content/uploads/2024/05/зображення_viber_2024-05-23_04-00-28-704-624x312.jpg">
+                    </div>
+                    <div class="card-header">
+                        <h4 class="card-text"><span title="14 Июня (П&quot;ятниця)">14.06.24</span></h4>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title"><a href="https://kotygoroshko.mk.ua/kamyanec-podilskij-chernivci-bakota/" class="event-link" title="Кам’янець-Подільський, Чернівці + Бакота" target="_blank" rel="noopener">Кам’янець-Подільський, Чернівці + Бакота</a></h3>
+                    </div>
+                    <div class="card-footer">
+                        <span class="card-tour__price"><div class="event-price">&nbsp;5 000 грн</div></span>
+                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#eventbookingModal" data-bookname="Кам’янець-Подільський, Чернівці + Бакота" data-bookid="6652" data-times="14.06.2024">забронювати</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="card card-tour -active">
+                    <div class="event-img-holder">
+                        <img data-src="https://kotygoroshko.mk.ua/wp-content/uploads/2024/05/зображення_viber_2024-05-23_04-00-28-704-624x312.jpg" class="event-img  lazyloaded" src="https://kotygoroshko.mk.ua/wp-content/uploads/2024/05/зображення_viber_2024-05-23_04-00-28-704-624x312.jpg">
+                    </div>
+                    <div class="card-header">
+                        <h4 class="card-text"><span title="14 Июня (П&quot;ятниця)">14.06.24</span></h4>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title"><a href="https://kotygoroshko.mk.ua/kamyanec-podilskij-chernivci-bakota/" class="event-link" title="Кам’янець-Подільський, Чернівці + Бакота" target="_blank" rel="noopener">Кам’янець-Подільський, Чернівці + Бакота</a></h3>
+                    </div>
+                    <div class="card-footer">
+                        <span class="card-tour__price"><div class="event-price">&nbsp;5 000 грн</div></span>
+                        <button type="button" class="btn -success" data-toggle="modal" data-target="#eventbookingModal" data-bookname="Кам’янець-Подільський, Чернівці + Бакота" data-bookid="6652" data-times="14.06.2024">забронювати</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="card card-tour -active">
+                    <div class="event-img-holder">
+                        <img data-src="https://kotygoroshko.mk.ua/wp-content/uploads/2024/05/зображення_viber_2024-05-23_04-00-28-704-624x312.jpg" class="event-img  lazyloaded" src="https://kotygoroshko.mk.ua/wp-content/uploads/2024/05/зображення_viber_2024-05-23_04-00-28-704-624x312.jpg">
+                    </div>
+                    <div class="card-header">
+                        <h4 class="card-text"><span title="14 Июня (П&quot;ятниця)">14.06.24</span></h4>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title"><a href="https://kotygoroshko.mk.ua/kamyanec-podilskij-chernivci-bakota/" class="event-link" title="Кам’янець-Подільський, Чернівці + Бакота" target="_blank" rel="noopener">Кам’янець-Подільський, Чернівці + Бакота</a></h3>
+                    </div>
+                    <div class="card-footer">
+                        <span class="card-tour__price"><div class="event-price">&nbsp;5 000 грн</div></span>
+                        <button type="button" class="btn -success" data-toggle="modal" data-target="#eventbookingModal" data-bookname="Кам’янець-Подільський, Чернівці + Бакота" data-bookid="6652" data-times="14.06.2024">забронювати</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="card card-tour -active">
+                    <div class="event-img-holder">
+                        <img data-src="https://kotygoroshko.mk.ua/wp-content/uploads/2024/05/зображення_viber_2024-05-23_04-00-28-704-624x312.jpg" class="event-img  lazyloaded" src="https://kotygoroshko.mk.ua/wp-content/uploads/2024/05/зображення_viber_2024-05-23_04-00-28-704-624x312.jpg">
+                    </div>
+                    <div class="card-header">
+                        <h4 class="card-text"><span title="14 Июня (П&quot;ятниця)">14.06.24</span></h4>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title"><a href="https://kotygoroshko.mk.ua/kamyanec-podilskij-chernivci-bakota/" class="event-link" title="Кам’янець-Подільський, Чернівці + Бакота" target="_blank" rel="noopener">Кам’янець-Подільський, Чернівці + Бакота</a></h3>
+                    </div>
+                    <div class="card-footer">
+                        <span class="card-tour__price"><div class="event-price">&nbsp;5 000 грн</div></span>
+                        <button type="button" class="btn -success" data-toggle="modal" data-target="#eventbookingModal" data-bookname="Кам’янець-Подільський, Чернівці + Бакота" data-bookid="6652" data-times="14.06.2024">забронювати</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="card card-tour -active">
+                    <div class="event-img-holder">
+                        <img data-src="https://kotygoroshko.mk.ua/wp-content/uploads/2024/05/зображення_viber_2024-05-23_04-00-28-704-624x312.jpg" class="event-img  lazyloaded" src="https://kotygoroshko.mk.ua/wp-content/uploads/2024/05/зображення_viber_2024-05-23_04-00-28-704-624x312.jpg">
+                    </div>
+                    <div class="card-header">
+                        <h4 class="card-text"><span title="14 Июня (П&quot;ятниця)">14.06.24</span></h4>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title"><a href="https://kotygoroshko.mk.ua/kamyanec-podilskij-chernivci-bakota/" class="event-link" title="Кам’янець-Подільський, Чернівці + Бакота" target="_blank" rel="noopener">Кам’янець-Подільський, Чернівці + Бакота</a></h3>
+                    </div>
+                    <div class="card-footer">
+                        <span class="card-tour__price"><div class="event-price">&nbsp;5 000 грн</div></span>
+                        <button type="button" class="btn -success" data-toggle="modal" data-target="#eventbookingModal" data-bookname="Кам’янець-Подільський, Чернівці + Бакота" data-bookid="6652" data-times="14.06.2024">забронювати</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2 class="1 h2">ТУРИ НА ЧЕРВЕНЬ</h2>
+        <div class="cards-list">
+            <div class="card-container">
+                <div class="card card-tour -active">
+                    <div class="event-img-holder">
+                        <img data-src="https://kotygoroshko.mk.ua/wp-content/uploads/2024/05/зображення_viber_2024-05-23_04-00-28-704-624x312.jpg" class="event-img  lazyloaded" src="https://kotygoroshko.mk.ua/wp-content/uploads/2024/05/зображення_viber_2024-05-23_04-00-28-704-624x312.jpg">
+                    </div>
+                    <div class="card-header">
+                        <h4 class="card-text"><span title="14 Июня (П&quot;ятниця)">14.06.24</span></h4>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title"><a href="https://kotygoroshko.mk.ua/kamyanec-podilskij-chernivci-bakota/" class="event-link" title="Кам’янець-Подільський, Чернівці + Бакота" target="_blank" rel="noopener">Кам’янець-Подільський, Чернівці + Бакота</a></h3>
+                    </div>
+                    <div class="card-footer">
+                        <span class="card-tour__price"><div class="event-price">&nbsp;5 000 грн</div></span>
+                        <button type="button" class="btn -success" data-toggle="modal" data-target="#eventbookingModal" data-bookname="Кам’янець-Подільський, Чернівці + Бакота" data-bookid="6652" data-times="14.06.2024">забронювати</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="card card-tour -active">
+                    <div class="event-img-holder">
+                        <img data-src="https://kotygoroshko.mk.ua/wp-content/uploads/2024/05/зображення_viber_2024-05-23_04-00-28-704-624x312.jpg" class="event-img  lazyloaded" src="https://kotygoroshko.mk.ua/wp-content/uploads/2024/05/зображення_viber_2024-05-23_04-00-28-704-624x312.jpg">
+                    </div>
+                    <div class="card-header">
+                        <h4 class="card-text"><span title="14 Июня (П&quot;ятниця)">14.06.24</span></h4>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title"><a href="https://kotygoroshko.mk.ua/kamyanec-podilskij-chernivci-bakota/" class="event-link" title="Кам’янець-Подільський, Чернівці + Бакота" target="_blank" rel="noopener">Кам’янець-Подільський, Чернівці + Бакота</a></h3>
+                    </div>
+                    <div class="card-footer">
+                        <span class="card-tour__price"><div class="event-price">&nbsp;5 000 грн</div></span>
+                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#eventbookingModal" data-bookname="Кам’янець-Подільський, Чернівці + Бакота" data-bookid="6652" data-times="14.06.2024">забронювати</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="card card-tour -active">
+                    <div class="event-img-holder">
+                        <img data-src="https://kotygoroshko.mk.ua/wp-content/uploads/2024/05/зображення_viber_2024-05-23_04-00-28-704-624x312.jpg" class="event-img  lazyloaded" src="https://kotygoroshko.mk.ua/wp-content/uploads/2024/05/зображення_viber_2024-05-23_04-00-28-704-624x312.jpg">
+                    </div>
+                    <div class="card-header">
+                        <h4 class="card-text"><span title="14 Июня (П&quot;ятниця)">14.06.24</span></h4>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title"><a href="https://kotygoroshko.mk.ua/kamyanec-podilskij-chernivci-bakota/" class="event-link" title="Кам’янець-Подільський, Чернівці + Бакота" target="_blank" rel="noopener">Кам’янець-Подільський, Чернівці + Бакота</a></h3>
+                    </div>
+                    <div class="card-footer">
+                        <span class="card-tour__price"><div class="event-price">&nbsp;5 000 грн</div></span>
+                        <button type="button" class="btn -success" data-toggle="modal" data-target="#eventbookingModal" data-bookname="Кам’янець-Подільський, Чернівці + Бакота" data-bookid="6652" data-times="14.06.2024">забронювати</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="card card-tour -active">
+                    <div class="event-img-holder">
+                        <img data-src="https://kotygoroshko.mk.ua/wp-content/uploads/2024/05/зображення_viber_2024-05-23_04-00-28-704-624x312.jpg" class="event-img  lazyloaded" src="https://kotygoroshko.mk.ua/wp-content/uploads/2024/05/зображення_viber_2024-05-23_04-00-28-704-624x312.jpg">
+                    </div>
+                    <div class="card-header">
+                        <h4 class="card-text"><span title="14 Июня (П&quot;ятниця)">14.06.24</span></h4>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title"><a href="https://kotygoroshko.mk.ua/kamyanec-podilskij-chernivci-bakota/" class="event-link" title="Кам’янець-Подільський, Чернівці + Бакота" target="_blank" rel="noopener">Кам’янець-Подільський, Чернівці + Бакота</a></h3>
+                    </div>
+                    <div class="card-footer">
+                        <span class="card-tour__price"><div class="event-price">&nbsp;5 000 грн</div></span>
+                        <button type="button" class="btn -success" data-toggle="modal" data-target="#eventbookingModal" data-bookname="Кам’янець-Подільський, Чернівці + Бакота" data-bookid="6652" data-times="14.06.2024">забронювати</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="card card-tour -active">
+                    <div class="event-img-holder">
+                        <img data-src="https://kotygoroshko.mk.ua/wp-content/uploads/2024/05/зображення_viber_2024-05-23_04-00-28-704-624x312.jpg" class="event-img  lazyloaded" src="https://kotygoroshko.mk.ua/wp-content/uploads/2024/05/зображення_viber_2024-05-23_04-00-28-704-624x312.jpg">
+                    </div>
+                    <div class="card-header">
+                        <h4 class="card-text"><span title="14 Июня (П&quot;ятниця)">14.06.24</span></h4>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title"><a href="https://kotygoroshko.mk.ua/kamyanec-podilskij-chernivci-bakota/" class="event-link" title="Кам’янець-Подільський, Чернівці + Бакота" target="_blank" rel="noopener">Кам’янець-Подільський, Чернівці + Бакота</a></h3>
+                    </div>
+                    <div class="card-footer">
+                        <span class="card-tour__price"><div class="event-price">&nbsp;5 000 грн</div></span>
+                        <button type="button" class="btn -success" data-toggle="modal" data-target="#eventbookingModal" data-bookname="Кам’янець-Подільський, Чернівці + Бакота" data-bookid="6652" data-times="14.06.2024">забронювати</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="card card-tour -active">
+                    <div class="event-img-holder">
+                        <img data-src="https://kotygoroshko.mk.ua/wp-content/uploads/2024/05/зображення_viber_2024-05-23_04-00-28-704-624x312.jpg" class="event-img  lazyloaded" src="https://kotygoroshko.mk.ua/wp-content/uploads/2024/05/зображення_viber_2024-05-23_04-00-28-704-624x312.jpg">
+                    </div>
+                    <div class="card-header">
+                        <h4 class="card-text"><span title="14 Июня (П&quot;ятниця)">14.06.24</span></h4>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title"><a href="https://kotygoroshko.mk.ua/kamyanec-podilskij-chernivci-bakota/" class="event-link" title="Кам’янець-Подільський, Чернівці + Бакота" target="_blank" rel="noopener">Кам’янець-Подільський, Чернівці + Бакота</a></h3>
+                    </div>
+                    <div class="card-footer">
+                        <span class="card-tour__price"><div class="event-price">&nbsp;5 000 грн</div></span>
+                        <button type="button" class="btn -success" data-toggle="modal" data-target="#eventbookingModal" data-bookname="Кам’янець-Подільський, Чернівці + Бакота" data-bookid="6652" data-times="14.06.2024">забронювати</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="custom-content flex justify-between">
+        <div class="column inline-block inline-middle -img">
+            <img src="public/bus.jpg" class="img"/>
+        </div>
+        <div class="column inline-block inline-middle">
+            <h3 class="column-title -simple f-500">Наші послуги</h3>
+            <ul class="services-list">
+                <li><b class="f-500">Поіздки з Миколаєва</b></li>
+                <li>Автобусні тури вихідного дня</li>
+                <li>Екскурсії</li>
+                <li>Одноденні поїздки по Україні</li>
+                <li>Екскурсії для школярів</li>
+                <li>Тури за кордон</li>
+                <li>Поїздки в Карпати</li>
+                <li>Поїздки у Львів</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-columns">
+            <div class="column">
+                <div class="logo">
+                    <a href="/" class="header-logo-link">
+                        <img src="/public/logo-n.png" alt="Kotygoroshko travel club" width="87" class="main-logo inline-block">
+                        <p class="company-name">Котигорошко</p>
+                        <p class="company-description">Клуб мандрівників</p>
+                    </a>
+                </div>
+            </div>
+            <div class="column">
+                <h4 class="column-title contacts" style="background-image: url('public/call.svg')">
+                    Контакти
+                </h4>
+                <div class="column-data">
+                    <p><a href="tel:+380930756960" class="phone-link">093-075-69-60</a></p>
+                    <p><a href="tel:+380677957415" class="phone-link">067-795-74-15</a> (Viber)</p>
+                    <p><a href="tel:+380508281688" class="phone-link">050-828-16-88</a>
+                </div>
+            </div>
+            <div class="column">
+                <h4 class="column-title info" style="background-image: url('public/info.svg')">
+                    Додаткова інформація
+                </h4>
+                <div class="column-data">
+                    <p><a href="tel:+380930756960" class="phone-link">093-075-69-60</a></p>
+                    <p><a href="tel:+380677957415" class="phone-link">067-795-74-15</a> (Viber)</p>
+                    <p><a href="tel:+380508281688" class="phone-link">050-828-16-88</a>
+                </div>
+            </div>
+            <div class="column">
+                <h4 class="column-title places" style="background-image: url('public/point.svg')">
+                    Місце збору
+                </h4>
+                <div class="column-data">
+                    Ост. Автовокзал <br/>(кафе Челентано). <br/><br/>
+                    Пушкінське кільце <br/>(по ПГУ за кільцем в сторону моста).
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-line">
+        <div class="links">
+            <a href="/privacy-policy/" class="text-nowrap">Політика конфіденційності</a>
+            &nbsp;|&nbsp;
+            <a class="text-nowrap" href="/publichnij-dogovir-oferta/">Публічний договір-оферта</a>
+        </div>
+        <div class="socials">
+            <a href="#" class="inline-block inline-middle"><img src="public/facebook.svg" alt="Facebook icon" width="48" height="48"></a>
+            <a href="#" class="inline-block inline-middle"><img src="public/instagram.svg" alt="Instagram icon" width="48" height="48"></a>
+            <a href="#" class="inline-block inline-middle"><img src="public/telegram.svg" alt="Telegram icon" width="48" height="48"></a>
+            <a href="#" class="inline-block inline-middle"><img src="public/viber.svg" alt="Viber icon" width="48" height="48"></a>
+        </div>
+    </div>
+    <script src="src/js/index.js"></script>
+</footer>
+<div class="overlay" id="overlay"></div>
+</body>
+</html>

@@ -1,0 +1,306 @@
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1640px
+);
+
+$container-max-widths: (
+  sm: 560px,
+  md: 750px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1580px,
+);
+
+@mixin make-container($max-widths: $container-max-widths) {
+  box-sizing: border-box;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @each $breakpoint, $max-width in $max-widths {
+    @if $max-width != null {
+      @media (min-width: map-get($grid-breakpoints, $breakpoint)) {
+        max-width: $max-width;
+      }
+    }
+  }
+}
+
+@mixin make-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+@mixin make-col($size, $columns: 12) {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  @if $size > 0 {
+    flex: 0 0 calc($size / $columns);
+    max-width: calc($size / $columns);
+  } @else {
+    display: none;
+  }
+}
+
+@mixin make-col-breakpoints($columns: 12) {
+  @each $breakpoint, $breakpoint-width in $grid-breakpoints {
+    @for $i from 1 through $columns {
+      @media (min-width: $breakpoint-width) {
+        .col-#{$breakpoint}-#{$i} {
+          @include make-col($i, $columns);
+        }
+      }
+    }
+  }
+}
+.container {
+  @include make-container();
+}
+
+.row {
+  @include make-row();
+}
+
+@include make-col-breakpoints();
+@mixin media-min($breakpoint) {
+  @if map-has-key($grid-breakpoints, $breakpoint) {
+    @media (min-width: map-get($grid-breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Unfortunately, there is no `#{$breakpoint}` breakpoint defined.";
+  }
+}
+
+@mixin media-max($breakpoint) {
+  @if map-has-key($grid-breakpoints, $breakpoint) {
+    @media (max-width: map-get($grid-breakpoints, $breakpoint) - 0.02px) {
+      @content;
+    }
+  } @else {
+    @warn "Unfortunately, there is no `#{$breakpoint}` breakpoint defined.";
+  }
+}
+
+@mixin media-between($breakpoint-start, $breakpoint-end) {
+  @if map-has-key($grid-breakpoints, $breakpoint-start) and map-has-key($grid-breakpoints, $breakpoint-end) {
+    @media (min-width: map-get($grid-breakpoints, $breakpoint-start)) and (max-width: map-get($grid-breakpoints, $breakpoint-end) - 0.02px) {
+      @content;
+    }
+  } @else {
+    @warn "Unfortunately, there is no `#{$breakpoint-start}` or `#{$breakpoint-end}` breakpoint defined.";
+  }
+}
+
+// Tailwind-like classes in SCSS
+
+// Spacing
+$spacing-scale: (
+  0: 0,
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 0.75rem,
+  4: 1rem,
+  5: 1.25rem,
+  6: 1.5rem,
+  8: 2rem,
+  10: 2.5rem,
+  12: 3rem,
+  16: 4rem,
+  20: 5rem,
+  24: 6rem,
+  32: 8rem,
+  40: 10rem,
+  48: 12rem,
+  56: 14rem,
+  64: 16rem,
+);
+
+@mixin generate-spacing-classes($property) {
+  @each $key, $value in $spacing-scale {
+    .#{$property}-#{$key} {
+      #{$property}: $value;
+    }
+  }
+}
+
+// Background colors
+$background-colors: (
+    white: #ffffff,
+    black: #000000,
+    gray-100: #f7fafc,
+    gray-200: #edf2f7,
+    gray-300: #e2e8f0,
+    gray-400: #cbd5e0,
+    gray-500: #a0aec0,
+    gray-600: #718096,
+    gray-700: #4a5568,
+    gray-800: #2d3748,
+    gray-900: #1a202c,
+    red-500: #f56565,
+    green-500: #48bb78,
+    blue-500: #4299e1,
+    yellow-500: #ecc94b,
+);
+
+// Background colors
+$font-sizes: (
+    0: 0,
+    12: 12,
+    13: 13,
+    14: 14,
+    15: 15,
+    16: 16,
+    17: 17,
+    18: 18,
+    60: 60,
+    80: 80,
+);
+
+@mixin generate-bg-classes() {
+  @each $name, $color in $background-colors {
+    .bg-#{"" + $name} {
+      background-color: $color;
+    }
+  }
+}
+
+// Text colors
+@mixin generate-text-classes() {
+  @each $name, $color in $background-colors {
+    .text-#{"" + $name} {
+      color: $color;
+    }
+  }
+}
+
+@mixin generate-fs() {
+  @each $name, $size in $font-sizes {
+    .fs-#{"" + $name} {
+      font-size: $size;
+    }
+  }
+}
+
+// Border radius
+$border-radius-scale: (
+    none: 0,
+    sm: 0.125rem,
+    default: 0.25rem,
+    md: 0.375rem,
+    lg: 0.5rem,
+    xl: 0.75rem,
+    '2xl': 1rem,
+    '3xl': 1.5rem,
+    full: 9999px,
+);
+
+@mixin generate-border-radius-classes() {
+  @each $key, $value in $border-radius-scale {
+    .rounded-#{"" + $key} {
+      border-radius: $value;
+    }
+  }
+}
+
+// Flexbox
+@mixin generate-flex-classes() {
+  .flex {
+    display: flex;
+  }
+
+  .flex-row {
+    flex-direction: row;
+  }
+
+  .flex-col {
+    flex-direction: column;
+  }
+
+  .justify-start {
+    justify-content: flex-start;
+  }
+
+  .justify-center {
+    justify-content: center;
+  }
+
+  .justify-end {
+    justify-content: flex-end;
+  }
+
+  .justify-between {
+    justify-content: space-between;
+  }
+
+  .items-start {
+    align-items: flex-start;
+  }
+
+  .items-center {
+    align-items: center;
+  }
+
+  .items-end {
+    align-items: flex-end;
+  }
+}
+// Display classes
+@mixin generate-display-classes() {
+  .block {
+    display: block;
+  }
+
+  .inline-block {
+    display: inline-block;
+  }
+
+  .inline {
+    display: inline;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .inline-top {
+    vertical-align: top;
+  }
+
+  .inline-middle {
+    vertical-align: middle;
+  }
+
+  .inline-bottom {
+    vertical-align: bottom;
+  }
+}
+
+// Applying mixins to generate classes
+@include generate-spacing-classes(margin);
+@include generate-spacing-classes(margin-top);
+@include generate-spacing-classes(margin-right);
+@include generate-spacing-classes(margin-bottom);
+@include generate-spacing-classes(margin-left);
+@include generate-spacing-classes(padding);
+@include generate-spacing-classes(padding-top);
+@include generate-spacing-classes(padding-right);
+@include generate-spacing-classes(padding-bottom);
+@include generate-spacing-classes(padding-left);
+
+@include generate-bg-classes();
+@include generate-text-classes();
+@include generate-border-radius-classes();
+@include generate-flex-classes();
+@include generate-display-classes();
