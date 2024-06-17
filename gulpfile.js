@@ -23,6 +23,7 @@ gulp.task('styles', function () {
         .pipe(rename({ suffix: '_new.min' }))
         .pipe(gulp.dest('dist/css'));  // Adjust the output path if needed
 });
+
 gulp.task('fonts', function () {
     return gulp.src('./src/**/fonts.scss')  // Adjust the path to your SCSS files
         .pipe(sass().on('error', sass.logError))
@@ -31,4 +32,10 @@ gulp.task('fonts', function () {
         .pipe(gulp.dest('dist'));  // Adjust the output path if needed
 });
 
-
+gulp.task('fonts.dev', function () {
+    return gulp.src('./src/**/fonts.dev.scss')  // Adjust the path to your SCSS files
+        .pipe(sass().on('error', sass.logError))
+        .pipe(cleanCSS({ compatibility: 'ie8' }))
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(gulp.dest('dev'));  // Adjust the output path if needed
+});

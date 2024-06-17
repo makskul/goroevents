@@ -97,7 +97,7 @@
   text-align: center;
 
   @include media-min(xl) {
-    font-size: 24px;
+    font-size: 23px;
   }
 
   .event-link {
@@ -142,5 +142,20 @@
     &:hover {
       background: #0d3f95;
     }
+  }
+}
+
+.booking-block {
+  background: #dce9fe;
+  border-radius: 20px;
+  padding: 8px 8px 4px;
+  margin: 5px 8px;
+  font-weight: 500;
+  color: $black;
+  text-align: center;
+
+  .booking-price {
+    color: #1E53AE;
+    margin-top: 8px;
   }
 }

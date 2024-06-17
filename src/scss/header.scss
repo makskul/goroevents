@@ -26,6 +26,7 @@
 }
 
 .sidebar {
+  color: red;
   position: fixed;
   top: 0;
   left: -350px;
@@ -45,7 +46,14 @@
 
 .sidebar {
   .menu-item {
-    margin-bottom: 12px;
+    margin-bottom: 15px;
+    border-top: 1px solid #9ab3dc73;
+    padding-top: 15px;
+    display: block;
+  }
+
+  .menu-item:first-child {
+    border-top: none;
   }
 
   a {
@@ -105,12 +113,13 @@
 
   .phone-link {
     color: #1E53AE;
-    display: block;
+    display: inline-block;
     font-size: 14px;
     font-weight: 500;
+    margin-left: 8px;
   }
 
-  .phone-link:nth-of-type(2) {
+  .phone-link.-mt {
     margin-top: 8px;
   }
 }

@@ -1,0 +1,25 @@
+.btn {
+  background: none;
+  border: 2px solid $blue-600;
+  cursor: pointer;
+
+  &.-success {
+    border: none;
+    background: $blue-600;
+    color: $white;
+  }
+
+  @at-root .modal-footer & {
+    border-radius: 20px;
+    padding: 10px 15px;
+  }
+
+  @at-root .booking-block & {
+    border-radius: 20px;
+    margin-top: 6px;
+    padding: 5px 10px;
+    line-height: 1.2;
+  }
+}
+
+
